@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template
 from models import db, Employee
 
 app = Flask(__name__)
@@ -6,9 +6,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///hrm.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
-@app.before_first_request
+# @app.before_first_request
 def create_tables():
-    db.create_all()
+    with app.app_context():
+        db.create_all()
 
 @app.route('/')
 def index():
@@ -26,12 +27,10 @@ def employee_detail(id):
 
 @app.route('/salary')
 def salary():
-    # Implement logic to display and manage salaries
     return render_template('salary.html')
 
 @app.route('/holidays')
 def holidays():
-    # Implement logic to manage holidays
     return render_template('holidays.html')
 
 if __name__ == '__main__':

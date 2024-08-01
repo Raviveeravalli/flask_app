@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>HRM System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <h1>Welcome to the HRM System</h1>
-    <ul>
-        <li><a href="{{ url_for('employee_list') }}">Employee List</a></li>
-        <li><a href="{{ url_for('salary') }}">Manage Salaries</a></li>
-        <li><a href="{{ url_for('holidays') }}">Manage Holidays</a></li>
-    </ul>
+    <nav>
+        <a href="{{ url_for('employee_list') }}">Employee List</a>
+        <a href="{{ url_for('salary') }}">Salaries</a>
+        <a href="{{ url_for('holidays') }}">Holidays</a>
+    </nav>
 </body>
 </html>
-
