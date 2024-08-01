@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <p>Name: {{ employee.name }}</p>
+    <p>Email: {{ employee.email }}</p>
+    <p>Position: {{ employee.position }}</p>
+    <p>Salary: {{ employee.salary }}</p>
+    <p>Holidays: {{ employee.holidays }}</p>
+    <a href="{{ url_for('employee_list') }}">Back to Employee List</a>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

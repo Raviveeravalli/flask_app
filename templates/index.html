@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask App</title>
+    <title>HRM System</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Welcome to My Flask App</h1>
-    <p>This is a simple web app using Flask.</p>
+    <h1>Welcome to the HRM System</h1>
+    <ul>
+        <li><a href="{{ url_for('employee_list') }}">Employee List</a></li>
+        <li><a href="{{ url_for('salary') }}">Manage Salaries</a></li>
+        <li><a href="{{ url_for('holidays') }}">Manage Holidays</a></li>
+    </ul>
 </body>
 </html>
+
