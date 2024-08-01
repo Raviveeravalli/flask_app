@@ -4,8 +4,7 @@ db = SQLAlchemy()
 
 class Employee(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    position = db.Column(db.String(100), nullable=False)
-    salary = db.Column(db.Float, nullable=False)
-    # Add other fields as necessary
+    name = db.Column(db.String(50))
+    # Add other fields as needed
+
 

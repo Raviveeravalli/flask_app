@@ -1,6 +1,4 @@
-blinker==1.8.2
-click==8.1.7
-Flask>=3.0.3
-Flask-SQLAlchemy
-gunicorn
+Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
+gunicorn==22.0.0
 
