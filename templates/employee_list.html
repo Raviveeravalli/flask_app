@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee List</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <h1>Employee List</h1>
+    <a href="{{ url_for('add_employee') }}">Add Employee</a>
     <ul>
         {% for employee in employees %}
             <li><a href="{{ url_for('employee_detail', id=employee.id) }}">{{ employee.name }}</a></li>
         {% endfor %}
     </ul>
-    <a href="{{ url_for('index') }}">Back to Home</a>
 </body>
 </html>
