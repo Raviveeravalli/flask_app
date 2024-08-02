@@ -6,7 +6,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///hrm.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
-# Create tables if they do not exist
 @app.before_first_request
 def create_tables():
     with app.app_context():
