@@ -4,11 +4,11 @@ app = Flask(__name__)
 
 @app.before_first_request
 def before_first_request_func():
-    print("This runs before the first request.")
+    print("Before first request")
 
 @app.route('/')
-def index():
-    return "Hello, World!"
+def hello_world():
+    return 'Hello, World!'
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run()
